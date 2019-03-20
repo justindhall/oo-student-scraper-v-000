@@ -37,7 +37,7 @@ class Scraper
     
     student
     
-    #social-links: ".social"
+    #social-links: ".social-icon-container"
   end
 
 end
