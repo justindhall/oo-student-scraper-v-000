@@ -38,7 +38,8 @@ class Scraper
     student
     
     #social-links: ".social-icon-container"
-    #twitter: ""
+    #twitter: ".children.css("a")[0]"
+    #linkedin: ".children.css("a")[1]"
   end
 
 end
