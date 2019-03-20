@@ -35,11 +35,30 @@ class Scraper
     
     student = {}
     
+    links = profile_page.css(".social-icon-container").children.css("a").map { |i| i.attribute('href').value}
+    links.each do |link|
+      if link.include?("linkedin")
+        student[:linkedin] = link
+      elsif link.include?("github")
+        student[:github] = link
+      elsif link.include?("twitter")
+        student[:github] = link
+      else
+        student[:blog] = link
+      end
+    end
+    
+    student[:profile_quote] = profile_page.css(".profile-quote").text if profile_page
+    
     student
     
     #social-links: ".social-icon-container"
     #twitter: ".children.css("a")[0]"
     #linkedin: ".children.css("a")[1]"
+    #github: ".children.css("a")[2]"
+    #blog: ".children.css("a")[3]"
+    #quote: ".profile-quote"
+    #bio: ".bio-content.content-holder div.description-holder p"
   end
 
 end
