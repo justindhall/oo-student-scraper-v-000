@@ -38,6 +38,7 @@ class Scraper
     student
     
     #social-links: ".social-icon-container"
+    #twitter: ""
   end
 
 end
