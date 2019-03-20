@@ -36,6 +36,8 @@ class Scraper
     student = {}
     
     student
+    
+    #social-links: ".social"
   end
 
 end
